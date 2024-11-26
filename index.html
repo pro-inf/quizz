@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas de Tecnología</title>
+
+   
+    <link rel="icon" href="icono-tecnologia.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <div id="nivel-selection" class="nivel-selection">
+        <h1>Selecciona el Nivel de Dificultad</h1>
+        <button onclick="localStorage.setItem('nivel', 'facil'); comenzarJuego()">Fácil</button>
+        <button onclick="localStorage.setItem('nivel', 'medio'); comenzarJuego()">Medio</button>
+        <button onclick="localStorage.setItem('nivel', 'dificil'); comenzarJuego()">Difícil</button>
+    </div>
+
+   
+    <div id="quiz-container" class="quiz-container" style="display: none;">
+        <h2>Pregunta</h2>
+        <p id="pregunta"></p>
+        <img id="imagen" src="" alt="Imagen de la pregunta" />
+        <input type="text" id="respuesta" placeholder="Escribe tu respuesta" />
+        <p id="mensaje-respuesta"></p>
+
+        
+        <p id="puntaje">Puntaje: 0</p>
+
+        
+        <button id="siguiente" onclick="cargarPregunta()" style="display:none;">Siguiente</button>
+        <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
